@@ -1,24 +1,17 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
+import { Cart, CartItem } from './_models/cart.model';
+import { CartService } from './_services/cart.service';
 
-import { AuthenticationService } from './_services';
-import { User } from './_models';
 
 @Component({ selector: 'app-root', templateUrl: 'app.component.html' })
-export class AppComponent {
-    user?: User | null;
-    isAdmin?: boolean = false;
+export class AppComponent implements OnInit {
+  cart: Cart = { items: [] };
 
-    constructor(private authenticationService: AuthenticationService) {
-        this.authenticationService.user.subscribe(x => {
-          this.user = x;
-          if (this.user?.username === 'admin'){
-            this.isAdmin = true;
-          }
-        });
-    }
+  constructor(private cartService: CartService) {}
 
-    logout() {
-        this.authenticationService.logout();
-        this.isAdmin = false;
-    }
+  ngOnInit() {
+    this.cartService.cart.subscribe((_cart) => {
+      this.cart = _cart;
+    });
+  }
 }
