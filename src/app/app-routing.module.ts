@@ -9,7 +9,7 @@ import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-    // { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'admin', component: HomeAdminComponent },
     { path: 'cart', component: CartComponent },

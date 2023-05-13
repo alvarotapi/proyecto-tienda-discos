@@ -31,6 +31,8 @@ import { ProductBoxComponent } from './components/home/components/product-box/pr
 import { CartComponent } from './components/cart/cart.component';
 import { CartService } from './_services';
 import { StoreService } from './_services/store.service';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelect, MatSelectModule } from '@angular/material/select';
 
 @NgModule({
     imports: [
@@ -51,6 +53,8 @@ import { StoreService } from './_services/store.service';
         MatTableModule,
         MatBadgeModule,
         MatSnackBarModule,
+        MatFormFieldModule,
+        MatSelectModule,
       ],
     declarations: [
         AppComponent,

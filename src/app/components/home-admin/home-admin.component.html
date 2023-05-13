@@ -1,3 +1,97 @@
-<div class="card mt-4">
-  <h4 class="card-header">Álvaro Records - Admin Page</h4>
-</div>
+
+
+ <section class="vh-100" style="background-color: #707172;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-9">
+        <h1 class="text-white mb-4">Admin form</h1>
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body">
+            <form appearance="fill" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+              <div class="row align-items-center pt-4 pb-3">
+                <div class="col-md-3 ps-5">
+                  <h2 class="mb-0" >ID:</h2>
+                </div>
+                <div class="col-md-9 pe-5">
+                  <input class="form-control form-control-lg" matInput type="number" formControlName="id"/>
+                </div>
+              </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+                <h2 class="mb-0" >Title:</h2>
+              </div>
+              <div class="col-md-9 pe-5">
+                <input class="form-control form-control-lg" matInput type="text" formControlName="title"/>
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+                <h2 class="mb-0" >Description:</h2>
+              </div>
+              <div class="col-md-9 pe-5">
+                <input class="form-control form-control-lg" matInput type="text" formControlName="description"/>
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+                <h2 class="mb-0" >Price:</h2>
+              </div>
+              <div class="col-md-9 pe-5">
+                <input class="form-control form-control-lg" matInput type="number" formControlName="price"/>
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+                <h2 class="mb-0" >Image URL:</h2>
+              </div>
+              <div class="col-md-9 pe-5">
+                <input class="form-control form-control-lg" matInput type="text" formControlName="image"/>
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+                <h2 class="mb-0" >Category:</h2>
+              </div>
+              <div class="col-md-9 pe-5">
+                <select class="form-control form-control-lg"  name="category" formControlName="category">
+                  <option value="Hip-Hop">Hip-Hop</option>
+                  <option value="Punk">Punk</option>
+                  <option value="Pop-Rock">Pop-Rock</option>
+                  <option value="Electronica">Electronica</option>
+                  <option value="Funk/Trip-Hop">Funk/Trip-Hop</option>
+               </select>
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="px-5 py-4">
+              <button type="submit" class="btn btn-primary btn-lg" style="background-color: black;">Send</button>
+            </div>
+
+          </form>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
