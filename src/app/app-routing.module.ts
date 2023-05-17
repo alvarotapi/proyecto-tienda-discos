@@ -14,7 +14,6 @@ const routes: Routes = [
     { path: 'admin', component: HomeAdminComponent },
     { path: 'cart', component: CartComponent },
 
-    // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
 

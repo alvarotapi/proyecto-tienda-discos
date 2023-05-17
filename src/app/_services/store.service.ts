@@ -1,31 +1,12 @@
-// import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-// import { Observable } from 'rxjs';
-// import { Product } from '../_models/product.model';
 import { data_products } from '@app/_data/products';
 import { data_categories } from '@app/_data/categories';
-
-// const STORE_BASE_URL = 'https://fakestoreapi.com';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StoreService {
-  constructor(
-    // private httpClient: HttpClient
-  ) {}
-
-  // getAllProducts(
-  //   limit = '12',
-  //   sort = 'desc',
-  //   category?: string
-  // ): Observable<Array<Product>> {
-  //   return this.httpClient.get<Array<Product>>(
-  //     `${STORE_BASE_URL}/products${
-  //       category ? '/category/' + category : ''
-  //     }?sort=${sort}&limit=${limit}`
-  //   );
-  // }
+  constructor() {}
 
   getAllProducts(category?: string){
     if ( category === 'All'){
@@ -38,12 +19,6 @@ export class StoreService {
       return data_products;
     }
   }
-
-  // getAllCategories(): Observable<Array<string>> {
-  //   return this.httpClient.get<Array<string>>(
-  //     `${STORE_BASE_URL}/products/categories`
-  //   );
-  // }
 
   getAllCategories(): string[] {
     return data_categories

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Cart, CartItem } from 'src/app/_models';
 import { CartService } from 'src/app/_services/cart.service';
@@ -56,7 +55,7 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   onCheckout(): void {
-    this._snackBar.open('Your cart is ready, we send yo an email to continue the shopping experience.', 'Ok', { duration: 5000 });
+    this._snackBar.open('Your cart is ready!', 'Ok', { duration: 5000 });
   }
 
   ngOnDestroy() {
